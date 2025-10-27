@@ -111,7 +111,7 @@ export default function Login() {
           {/* Register Link */}
           <p className="text-center text-white/25 text-[13px] mt-6">
             Нет учетной записи?{" "}
-            <Link to="/" className="hover:text-white/40 transition-colors">
+            <Link to="/register" className="hover:text-white/40 transition-colors">
               Зарегистрироваться
             </Link>
           </p>

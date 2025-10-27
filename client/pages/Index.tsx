@@ -19,7 +19,7 @@ export default function Index() {
         </h1>
         <nav className="flex items-center gap-6 md:gap-10">
           <button
-            onClick={() => setActiveSection("register")}
+            onClick={() => navigate("/register")}
             className="text-white text-sm md:text-base font-medium hover:opacity-80 transition-opacity capitalize"
           >
             Зарегистрироваться
@@ -172,7 +172,7 @@ export default function Index() {
       <section className="px-8 md:px-16 py-20 md:py-32 flex flex-col items-center gap-12">
         <div className="flex flex-wrap items-center justify-center gap-4">
           <button
-            onClick={() => setActiveSection("new-user")}
+            onClick={() => navigate("/register")}
             className="w-full sm:w-auto min-w-[280px] md:min-w-[325px] h-20 px-6 bg-[#313030] text-white rounded-xl border-[1.5px] border-black shadow-[0_8px_4px_0_rgba(0,0,0,0.5)] text-xl md:text-2xl font-medium hover:bg-[#3f3f3f] transition-colors"
           >
             Я новенький
