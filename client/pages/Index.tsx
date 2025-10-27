@@ -38,14 +38,14 @@ export default function Index() {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/ed420d055f83f356d1d4405b160694007d20f42b?width=359"
             alt=""
-            className="absolute left-[5%] top-[10%] w-28 h-28 md:w-36 md:h-36 lg:w-[179px] lg:h-[179px] opacity-50 animate-levitate-slow"
-            style={{ transform: "rotate(40deg)" }}
+            className="absolute left-[5%] top-[10%] w-[135px] h-[135px] md:w-[173px] md:h-[173px] lg:w-[215px] lg:h-[215px] opacity-50 animate-levitate-slow"
+            style={{ transform: "rotate(15deg)" }}
           />
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/2f61dedd682c4d06168644072d1b811c3293c85f?width=440"
             alt=""
-            className="absolute right-[5%] top-[15%] w-32 h-32 md:w-44 md:h-44 lg:w-[220px] lg:h-[220px] opacity-50 animate-levitate"
-            style={{ transform: "rotate(40deg)" }}
+            className="absolute right-[5%] top-[15%] w-[154px] h-[154px] md:w-[211px] md:h-[211px] lg:w-[264px] lg:h-[264px] opacity-50 animate-levitate"
+            style={{ transform: "rotate(15deg)" }}
           />
         </div>
 
@@ -55,7 +55,7 @@ export default function Index() {
           </h2>
           <p className="text-lg md:text-xl lg:text-2xl text-white/55 text-center font-medium leading-[145%] max-w-3xl">
             Первая на рынке социальная сеть для тех, кто хочет заниматься спортом
-            и играть одновременно
+            и играть одновреме��но
           </p>
         </div>
 
@@ -147,12 +147,12 @@ export default function Index() {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/0f230993c9972b2c1cef3d0c6ba8f3373d0bfd3e?width=408"
             alt=""
-            className="absolute left-[2%] bottom-[10%] w-32 h-32 md:w-48 md:h-48 lg:w-[204px] lg:h-[204px] opacity-50"
+            className="absolute left-[2%] bottom-[10%] w-[154px] h-[154px] md:w-[230px] md:h-[230px] lg:w-[245px] lg:h-[245px] opacity-50"
           />
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/1b43863a383341ee852ae23b137c92a173c40398?width=410"
             alt=""
-            className="absolute right-[2%] bottom-[10%] w-32 h-32 md:w-48 md:h-48 lg:w-[205px] lg:h-[205px] opacity-50"
+            className="absolute right-[2%] bottom-[10%] w-[154px] h-[154px] md:w-[230px] md:h-[230px] lg:w-[246px] lg:h-[246px] opacity-50"
           />
         </div>
 

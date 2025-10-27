@@ -82,18 +82,18 @@ export default {
         },
         levitate: {
           "0%, 100%": {
-            transform: "translateY(0) rotate(40deg)",
+            transform: "translateY(0) rotate(15deg)",
           },
           "50%": {
-            transform: "translateY(-20px) rotate(40deg)",
+            transform: "translateY(-20px) rotate(15deg)",
           },
         },
         "levitate-slow": {
           "0%, 100%": {
-            transform: "translateY(0) rotate(40deg)",
+            transform: "translateY(0) rotate(15deg)",
           },
           "50%": {
-            transform: "translateY(-15px) rotate(40deg)",
+            transform: "translateY(-15px) rotate(15deg)",
           },
         },
       },
