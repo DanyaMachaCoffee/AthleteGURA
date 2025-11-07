@@ -1,16 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Login logic would go here
+    // Simulate login logic
     console.log("Login attempt:", { email, password, rememberMe });
+
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      // Redirect to profile after successful login
+      navigate("/profile");
+    }, 500);
   };
 
   return (
@@ -132,9 +141,10 @@ export default function Login() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full h-16 bg-[#212121] text-white text-base font-medium shadow-[0_8px_4px_rgba(0,0,0,0.5)] hover:bg-[#2a2a2a] transition-colors"
+              disabled={isLoading}
+              className="w-full h-16 bg-[#212121] text-white text-base font-medium shadow-[0_8px_4px_rgba(0,0,0,0.5)] hover:bg-[#2a2a2a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              ВОЙТИ
+              {isLoading ? "Загрузка..." : "ВОЙТИ"}
             </button>
           </form>
 

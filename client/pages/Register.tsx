@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { format } from "date-fns";
+import { Calendar } from "@/components/ui/calendar";
 
 export default function Register() {
   const [step, setStep] = useState(1);
@@ -17,9 +19,58 @@ export default function Register() {
   const [fullName, setFullName] = useState("");
   const [telegram, setTelegram] = useState("");
   const [birthdate, setBirthdate] = useState("");
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [city, setCity] = useState("");
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [showCityDropdown, setShowCityDropdown] = useState(false);
+
+  const datePickerRef = useRef<HTMLDivElement>(null);
+  const cityDropdownRef = useRef<HTMLDivElement>(null);
   
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (datePickerRef.current && !datePickerRef.current.contains(event.target as Node)) {
+        setShowDatePicker(false);
+      }
+      if (cityDropdownRef.current && !cityDropdownRef.current.contains(event.target as Node)) {
+        setShowCityDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const validateDate = (dateStr: string): boolean => {
+    const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$/;
+    if (!dateRegex.test(dateStr)) {
+      return false;
+    }
+
+    const [day, month, year] = dateStr.split('.').map(Number);
+    const date = new Date(year, month - 1, day);
+
+    if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleDateSelect = (date: Date | undefined) => {
+    if (date) {
+      setSelectedDate(date);
+      setBirthdate(format(date, "dd.MM.yyyy"));
+      setShowDatePicker(false);
+    }
+  };
+
+  const handleCitySelect = (selectedCity: string) => {
+    setCity(selectedCity);
+    setShowCityDropdown(false);
+  };
 
   const handleContinueStep1 = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,19 +96,25 @@ export default function Register() {
 
   const handleRegisterStep2 = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate step 2
     if (!fullName || !telegram || !birthdate || !city) {
       alert("Пожалуйста, заполните все поля!");
       return;
     }
-    
+
+    // Validate birthdate format
+    if (!validateDate(birthdate)) {
+      alert("Пожалуйста, введите корректную дату рождения в формате ДД.ММ.ГГГГ");
+      return;
+    }
+
     // Simulate AJAX call for final registration
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      // Registration complete - redirect to login
-      navigate("/login");
+      // Registration complete - redirect to profile
+      navigate("/profile");
     }, 500);
   };
 
@@ -242,39 +299,102 @@ export default function Register() {
               </div>
 
               {/* Birthdate Field */}
-              <div className="relative">
+              <div className="relative" ref={datePickerRef}>
                 <div className="border border-[#212121] bg-black p-4">
                   <label className="block text-white text-[10px] font-medium mb-2">
                     Дата рождения
                   </label>
-                  <input
-                    type="text"
-                    value={birthdate}
-                    onChange={(e) => setBirthdate(e.target.value)}
-                    placeholder="Вводите в формате ДД.ММ.ГГГГ"
-                    className="w-full bg-transparent text-[#757575] text-base outline-none placeholder:text-[#757575]"
-                    required
-                    disabled={isLoading}
-                  />
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setShowDatePicker(!showDatePicker)}
+                      disabled={isLoading}
+                      className="flex-shrink-0 text-white/50 hover:text-white transition-colors disabled:opacity-50"
+                    >
+                      <svg className="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66667 1.66667V4.16667" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13.3333 1.66667V4.16667" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M2.91667 7.575H17.0833" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M17.5 7.08333V14.1667C17.5 16.6667 16.25 18.3333 13.3333 18.3333H6.66667C3.75 18.3333 2.5 16.6667 2.5 14.1667V7.08333C2.5 4.58333 3.75 2.91667 6.66667 2.91667H13.3333C16.25 2.91667 17.5 4.58333 17.5 7.08333Z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13.0788 11.4167H13.0863" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M13.0788 13.9167H13.0863" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M9.99607 11.4167H10.0036" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M9.99607 13.9167H10.0036" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M6.91209 11.4167H6.91957" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M6.91209 13.9167H6.91957" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      value={birthdate}
+                      onChange={(e) => setBirthdate(e.target.value)}
+                      placeholder="Вводите в формате ДД.ММ.ГГГГ"
+                      className="flex-1 bg-transparent text-[#757575] text-base outline-none placeholder:text-[#757575]"
+                      required
+                      disabled={isLoading}
+                    />
+                  </div>
                 </div>
+                {showDatePicker && (
+                  <div className="absolute z-50 mt-2 bg-white border border-[#212121] rounded-lg shadow-xl p-4">
+                    <Calendar
+                      mode="single"
+                      selected={selectedDate}
+                      onSelect={handleDateSelect}
+                      disabled={(date) => date > new Date() || date < new Date("1900-01-01")}
+                      initialFocus
+                    />
+                  </div>
+                )}
               </div>
 
               {/* City Field */}
-              <div className="relative">
+              <div className="relative" ref={cityDropdownRef}>
                 <div className="border border-[#212121] bg-black p-4">
                   <label className="block text-white text-[10px] font-medium mb-2">
                     Город
                   </label>
-                  <input
-                    type="text"
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                    placeholder="Введите или выберите из выпадающего списка"
-                    className="w-full bg-transparent text-[#757575] text-[15px] outline-none placeholder:text-[#757575]"
-                    required
-                    disabled={isLoading}
-                  />
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="text"
+                      value={city}
+                      onChange={(e) => setCity(e.target.value)}
+                      onClick={() => setShowCityDropdown(true)}
+                      placeholder="Введите или выберите из выпадающего списка"
+                      className="flex-1 bg-transparent text-[#757575] text-[15px] outline-none placeholder:text-[#757575]"
+                      required
+                      disabled={isLoading}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowCityDropdown(!showCityDropdown)}
+                      disabled={isLoading}
+                      className="flex-shrink-0 text-white/50 hover:text-white transition-colors disabled:opacity-50"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.28 5.96667L8.9333 10.3133C8.41997 10.8267 7.57997 10.8267 7.06664 10.3133L2.71997 5.96667" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+                {showCityDropdown && (
+                  <div className="absolute z-50 mt-2 w-full bg-black border border-[#212121] rounded-lg shadow-xl overflow-hidden">
+                    <button
+                      type="button"
+                      onClick={() => handleCitySelect("Москва")}
+                      className="w-full text-left px-4 py-3 text-white hover:bg-[#212121] transition-colors"
+                    >
+                      Москва
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleCitySelect("Санкт-Петербург")}
+                      className="w-full text-left px-4 py-3 text-white hover:bg-[#212121] transition-colors"
+                    >
+                      Санкт-Петербург
+                    </button>
+                  </div>
+                )}
               </div>
 
               {/* Button Group */}
