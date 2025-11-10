@@ -117,7 +117,7 @@ export default function Profile() {
 
             {/* Messages Icon */}
             <svg
-              className="w-[21px] h-[21px] opacity-50"
+              className="w-[21px] h-[21px] opacity-50 mt-20"
               viewBox="0 0 21 21"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
