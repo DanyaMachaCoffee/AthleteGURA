@@ -6,10 +6,10 @@ export default function Profile() {
   const [fullName, setFullName] = useState("Захар Смирнов");
   const [username, setUsername] = useState("pauchuck");
   const [gender, setGender] = useState("НЕМЕЦКИЙ ВЕРТОЛЁТ PANZERKAMPFGEN-5846");
-  const [city, setCity] = useState("");
-  const [birthdate, setBirthdate] = useState("");
+  const [city, setCity] = useState("Великие Луки");
+  const [birthdate, setBirthdate] = useState("02.02.1451");
   const [telegram, setTelegram] = useState("@Lovely_Specty");
-  const [email] = useState("alexarawles@gmail.com");
+  const [email] = useState("vadik8c@gmail.com");
 
   const [showGenderDropdown, setShowGenderDropdown] = useState(false);
   const [showCityDropdown, setShowCityDropdown] = useState(false);
