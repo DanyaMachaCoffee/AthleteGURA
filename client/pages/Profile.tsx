@@ -330,7 +330,7 @@ export default function Profile() {
                       value={gender}
                       onChange={(e) => setGender(e.target.value)}
                       placeholder="Выберите пол"
-                      className="w-full bg-[#F9F9F9]/50 rounded-lg px-4 py-3 text-black/40 text-base outline-none pr-10 mt-4 ml-2"
+                      className="w-full bg-[#F9F9F9]/50 rounded-lg px-4 py-3 text-black/40 text-base outline-none pr-10"
                     />
                     <button
                       onClick={() => setShowGenderDropdown(!showGenderDropdown)}
@@ -357,7 +357,7 @@ export default function Profile() {
 
                 {/* City */}
                 <div className="relative">
-                  <label className="block text-black/80 text-base mb-2">
+                  <label className="block text-black/80 text-base mt-40">
                     Город
                   </label>
                   <div className="relative">
