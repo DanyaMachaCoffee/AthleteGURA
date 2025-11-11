@@ -262,7 +262,7 @@ export default function ProfileStats() {
 
             {/* Progress Bar Section */}
             <div className="relative mb-12">
-              <div className="h-[46px] rounded-[50px] border-[3px] border-black bg-gradient-to-r from-[#4986F9] via-[#2A387B] to-black shadow-[0_6px_4px_4px_rgba(0,0,0,0.33)] relative overflow-hidden max-w-[1073px]">
+              <div className="h-[46px] rounded-[50px] border-[30px] border-black bg-gradient-to-r from-[#4986F9] via-[#2A387B] to-black shadow-[0_6px_4px_4px_rgba(0,0,0,0.33)] relative overflow-hidden max-w-[1073px]">
                 <div 
                   className="h-full bg-gradient-to-r from-[#4986F9] to-[#2A387B] rounded-[5000px]"
                   style={{ width: `${(USER_STATS.currentXP / USER_STATS.maxXP) * 100}%` }}
