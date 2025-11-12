@@ -417,7 +417,7 @@ export default function Settings() {
               </button>
             </div>
         
-            <div className="flex gap-4 items-center justify-end mb-6">
+            <div className="flex gap-4 items-center justify-end ">
               
               <button
                 onClick={handleDeleteAccount}
