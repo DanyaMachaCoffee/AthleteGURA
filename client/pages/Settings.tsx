@@ -292,7 +292,7 @@ export default function Settings() {
             {/* Password Change Section */}
             <h2 className="text-black text-4xl font-bold mb-6">Смена пароля</h2>
 
-            <div className="space-y-4 mb-6">
+            <div className="flex flex-col gap-4 mb-6">
               <input
                 type="password"
                 value={currentPassword}
@@ -317,6 +317,7 @@ export default function Settings() {
                 className="w-full max-w-[526px] h-[45px] rounded-lg bg-[#F9F9F9]/50 px-4 text-black/40 text-base outline-none placeholder:text-black/40"
               />
             </div>
+         
 
             <p className="text-black text-base opacity-80 mb-6 max-w-[526px]">
               Требования: не мене�� 8 символов, не менее 1 заглавной буквы, не
