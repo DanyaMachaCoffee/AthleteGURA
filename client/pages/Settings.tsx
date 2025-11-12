@@ -408,7 +408,7 @@ export default function Settings() {
 
               <button
                 onClick={handleLogout}
-                className="w-[2170px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
+                className="w-[217px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
               >
                 Выйти
               </button>
