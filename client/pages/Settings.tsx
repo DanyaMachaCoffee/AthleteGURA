@@ -408,7 +408,7 @@ export default function Settings() {
               </button>
             </div>
 
-            <div className="flex gap-4 items-center justify-end ">
+            <div className="flex gap-4 items-center justify-end mb-6">
               <button
                 onClick={handleLogout}
                 className="w-[257px] h-[38px] rounded-lg bg-[#B52626] text-white text-base text-center"
