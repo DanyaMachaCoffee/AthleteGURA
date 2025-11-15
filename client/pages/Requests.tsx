@@ -258,7 +258,10 @@ export default function Requests() {
 
             <div className="flex items-center gap-4">
               {/* Search */}
-              <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center">
+              <button
+                onClick={() => navigate("/find-requests")}
+                className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center hover:bg-white/70 transition-colors"
+              >
                 <svg
                   className="w-[22px] h-[22px]"
                   viewBox="0 0 22 22"
@@ -271,7 +274,7 @@ export default function Requests() {
                     fillOpacity="0.6"
                   />
                 </svg>
-              </div>
+              </button>
 
               {/* Stats */}
               <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center relative">

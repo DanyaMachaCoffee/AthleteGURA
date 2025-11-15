@@ -186,7 +186,10 @@ export default function ProfileStats() {
 
             <div className="flex items-center gap-4">
               {/* Search */}
-              <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center">
+              <button
+                onClick={() => navigate("/find-requests")}
+                className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center hover:bg-white/70 transition-colors"
+              >
                 <svg
                   className="w-[22px] h-[22px]"
                   viewBox="0 0 22 22"
@@ -199,7 +202,7 @@ export default function ProfileStats() {
                     fillOpacity="0.6"
                   />
                 </svg>
-              </div>
+              </button>
 
               {/* Stats */}
               <div className="w-[46px] h-[47px] rounded-[10px] bg-white/50 flex items-center justify-center relative">
@@ -403,7 +406,7 @@ export default function ProfileStats() {
               {/* Right Card - Current Ranking */}
               <div className="flex flex-col gap-6">
                 <p className="text-black text-2xl font-medium opacity-80">
-                  Сейчас в рейтинге Вы выглядите так:
+                  Сейчас в рейт��нге Вы выглядите так:
                 </p>
 
                 <div className="rounded-[55px] border-[1.5px] border-black bg-gradient-to-r from-[#4F0A0A] to-[#780000] p-6">
