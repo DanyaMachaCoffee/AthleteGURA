@@ -34,7 +34,7 @@ export default function FindRequests() {
       id: 2,
       title: "Бухич на заборах МАИ №2",
       description: "Вы будете играть в Литрбол!",
-      venue: "Московсикий авиационный...",
+      venue: "Мо��ковсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
       players: "Игроков: 256/256",
       avgRating: "Ср. рейтинг: ~50000",
@@ -117,7 +117,7 @@ export default function FindRequests() {
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
       players: "Игроков: 256/256",
-      avgRating: "��р. рейтинг: ~50000",
+      avgRating: "Ср. рейтинг: ~50000",
       sport: "Литрбол",
     },
     {
@@ -152,7 +152,7 @@ export default function FindRequests() {
     },
     {
       id: 14,
-      title: "Бухич н�� заборах МАИ №14",
+      title: "Бухич на заборах МАИ №14",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -506,7 +506,7 @@ export default function FindRequests() {
             </div>
 
             {/* Requests List */}
-            <div className="space-y-0">
+            <div className="space-y-0 max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent hover:scrollbar-thumb-white/50">
               {requests.map((request) => (
                 <div
                   key={request.id}
