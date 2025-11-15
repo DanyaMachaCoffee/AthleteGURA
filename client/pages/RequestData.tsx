@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { REQUEST_DATA_MOCK, HEADER_DATA } from "@/constants/requestDataConstants";
+import {
+  REQUEST_DATA_MOCK,
+  HEADER_DATA,
+} from "@/constants/requestDataConstants";
 
 export default function RequestData() {
   const navigate = useNavigate();
@@ -101,7 +104,8 @@ export default function RequestData() {
 
                   <div className="mb-6">
                     <p className="text-white text-[17px] font-light leading-relaxed">
-                      Описание игры:<br />
+                      Описание игры:
+                      <br />
                       {requestData.gameDescription}
                     </p>
                   </div>
@@ -119,21 +123,22 @@ export default function RequestData() {
                     </div>
                     <div className="border border-white rounded-[50px] px-4 py-2">
                       <span className="text-white text-[15px] font-light">
-                        Игроков: {requestData.playerCount}/{requestData.maxPlayers}
+                        Игроков: {requestData.playerCount}/
+                        {requestData.maxPlayers}
                       </span>
                     </div>
                   </div>
 
                   <div className="relative">
                     <div className="w-[10px] h-[71px] rounded-[40px] bg-[#5D5D5D] absolute right-2 top-[255px]"></div>
-                    
+
                     <div className="grid grid-cols-4 gap-x-[18px] gap-y-3 mb-8 max-h-[217px] overflow-y-auto pr-4">
                       {requestData.players.map((player) => (
                         <div
                           key={player.id}
                           className="rounded-[25px] border-[1.5px] border-black p-3 flex items-center gap-3"
                           style={{
-                            background: `linear-gradient(90deg, ${player.gradientFrom} 0%, ${player.gradientTo} 100%)`
+                            background: `linear-gradient(90deg, ${player.gradientFrom} 0%, ${player.gradientTo} 100%)`,
                           }}
                         >
                           <img
@@ -145,7 +150,7 @@ export default function RequestData() {
                             <p
                               className="text-white text-[10px] font-bold text-center leading-tight"
                               style={{
-                                WebkitTextStroke: "1px black"
+                                WebkitTextStroke: "1px black",
                               }}
                             >
                               {player.name}

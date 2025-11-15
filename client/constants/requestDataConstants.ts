@@ -28,7 +28,8 @@ export const REQUEST_DATA_MOCK: RequestData = {
   requestNumber: "4,539,222",
   title: "Bootcamp with Absolute Vodka",
   subtitle: "Вы будете играть в Литрбол!",
-  gameDescription: "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века.",
+  gameDescription:
+    'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.',
   dateTime: "18.10.2025, 23:33",
   playerCount: "256",
   maxPlayers: "256",
@@ -36,7 +37,8 @@ export const REQUEST_DATA_MOCK: RequestData = {
   venueLabel: "Место проведения",
   venueMapImage: "/map.webp",
   hasApplied: false,
-  notAppliedMessage: "Вы еще не подавали запроса на участие в этом мероприятии.",
+  notAppliedMessage:
+    "Вы еще не подавали запроса на участие в этом мероприятии.",
   stickerImage: "/cat_in_a_cap.webm",
   players: [
     {
@@ -45,7 +47,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 2,
@@ -53,7 +55,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 3,
@@ -61,7 +63,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 4,
@@ -69,7 +71,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 5,
@@ -77,7 +79,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 6,
@@ -85,7 +87,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 7,
@@ -93,7 +95,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 8,
@@ -101,7 +103,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 9,
@@ -109,7 +111,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 10,
@@ -117,7 +119,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 11,
@@ -125,7 +127,7 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
+      gradientTo: "#780000",
     },
     {
       id: 12,
@@ -133,13 +135,13 @@ export const REQUEST_DATA_MOCK: RequestData = {
       nickname: "Spectrum",
       avatar: "/placeholder_avatar.jpg",
       gradientFrom: "#4F0A0A",
-      gradientTo: "#780000"
-    }
-  ]
+      gradientTo: "#780000",
+    },
+  ],
 };
 
 export const HEADER_DATA = {
   userName: "Захар",
   currentDate: "Сб, 11 октября 2025",
-  profileImage: "/placeholder_avatar.jpg"
+  profileImage: "/placeholder_avatar.jpg",
 };
