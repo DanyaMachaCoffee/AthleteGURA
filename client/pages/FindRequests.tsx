@@ -22,7 +22,7 @@ export default function FindRequests() {
   const requests: RequestItem[] = [
     {
       id: 1,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №1",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -32,9 +32,9 @@ export default function FindRequests() {
     },
     {
       id: 2,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №2",
       description: "Вы будете играть в Литрбол!",
-      venue: "Московсикий авиационный...",
+      venue: "Мо��ковсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
       players: "Игроков: 256/256",
       avgRating: "Ср. рейтинг: ~50000",
@@ -42,7 +42,7 @@ export default function FindRequests() {
     },
     {
       id: 3,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №3",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -52,7 +52,7 @@ export default function FindRequests() {
     },
     {
       id: 4,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №4",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -62,7 +62,7 @@ export default function FindRequests() {
     },
     {
       id: 5,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №5",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -72,7 +72,7 @@ export default function FindRequests() {
     },
     {
       id: 6,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №6",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -82,7 +82,77 @@ export default function FindRequests() {
     },
     {
       id: 7,
-      title: "Bootcamp with Absolute Vodka",
+      title: "Бухич на заборах МАИ №7",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 8,
+      title: "Бухич на заборах МАИ №8",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 9,
+      title: "Бухич на заборах МАИ №9",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 10,
+      title: "Бухич на заборах МАИ №10",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 11,
+      title: "Бухич на заборах МАИ №11",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 12,
+      title: "Бухич на заборах МАИ №12",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 13,
+      title: "Бухич на заборах МАИ №13",
+      description: "Вы будете играть в Литрбол!",
+      venue: "Московсикий авиационный...",
+      dateTime: "18.10.2025, 23:33",
+      players: "Игроков: 256/256",
+      avgRating: "Ср. рейтинг: ~50000",
+      sport: "Литрбол",
+    },
+    {
+      id: 14,
+      title: "Бухич на заборах МАИ №14",
       description: "Вы будете играть в Литрбол!",
       venue: "Московсикий авиационный...",
       dateTime: "18.10.2025, 23:33",
@@ -436,7 +506,7 @@ export default function FindRequests() {
             </div>
 
             {/* Requests List */}
-            <div className="space-y-0">
+            <div className="space-y-0 max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent hover:scrollbar-thumb-white/50">
               {requests.map((request) => (
                 <div
                   key={request.id}
