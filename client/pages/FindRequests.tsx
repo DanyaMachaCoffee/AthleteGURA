@@ -352,7 +352,7 @@ export default function FindRequests() {
                   {/* Left Side - Event Info */}
                   <div className="flex-1">
                     <button
-                      onClick={() => navigate("/login")}
+                      onClick={() => navigate("/request-data")}
                     >
                       <h3 className="text-white text-[20px] font-light mb-1">
                         {request.title}
