@@ -1,0 +1,145 @@
+export interface Player {
+  id: number;
+  name: string;
+  nickname: string;
+  avatar: string;
+  gradientFrom: string;
+  gradientTo: string;
+}
+
+export interface RequestData {
+  requestNumber: string;
+  title: string;
+  subtitle: string;
+  gameDescription: string;
+  dateTime: string;
+  playerCount: string;
+  maxPlayers: string;
+  avgRating: string;
+  venueLabel: string;
+  venueMapImage: string;
+  hasApplied: boolean;
+  notAppliedMessage: string;
+  stickerImage: string;
+  players: Player[];
+}
+
+export const REQUEST_DATA_MOCK: RequestData = {
+  requestNumber: "4,539,222",
+  title: "Bootcamp with Absolute Vodka",
+  subtitle: "Вы будете играть в Литрбол!",
+  gameDescription: "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века.",
+  dateTime: "18.10.2025, 23:33",
+  playerCount: "256",
+  maxPlayers: "256",
+  avgRating: "~50000",
+  venueLabel: "Место проведения",
+  venueMapImage: "https://api.builder.io/api/v1/image/assets/TEMP/9a209da63c35fc4d865528a9f05eda5d22acbc85",
+  hasApplied: false,
+  notAppliedMessage: "Вы еще не подавали запроса на участие в этом мероприятии.",
+  stickerImage: "https://api.builder.io/api/v1/image/assets/TEMP/592971601b73e2186d29e697d3b86bb56af5f25e",
+  players: [
+    {
+      id: 1,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 2,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 3,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 4,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 5,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 6,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 7,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 8,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 9,
+      name: "Крылов (Spectrum) Даniил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 10,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 11,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    },
+    {
+      id: 12,
+      name: "Крылов (Spectrum) Даниил",
+      nickname: "Spectrum",
+      avatar: "https://api.builder.io/api/v1/image/assets/TEMP/1c0c1f7ca8ef2ae4380cf6cb33cd212e1dc8d200",
+      gradientFrom: "#4F0A0A",
+      gradientTo: "#780000"
+    }
+  ]
+};
+
+export const HEADER_DATA = {
+  userName: "Захар",
+  currentDate: "Сб, 11 октября 2025",
+  profileImage: "https://api.builder.io/api/v1/image/assets/TEMP/000c31178b1986558f577f90ead0f3bed101a8c7"
+};
