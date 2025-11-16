@@ -207,7 +207,7 @@ export default function PublicProfile() {
               <div className="flex items-center relative">
                 <div className="relative z-10">
                   <img
-                    src={`${PUBLIC_PROFILE_DATA.otherSports[0].badgeImage}?width=234`}
+                    src={`${PUBLIC_PROFILE_DATA.otherSports[0].badgeImage}?width=2304`}
                     alt={PUBLIC_PROFILE_DATA.otherSports[0].name}
                     className="w-[117px] h-[116px] object-contain -rotate-[15deg]"
                   />
